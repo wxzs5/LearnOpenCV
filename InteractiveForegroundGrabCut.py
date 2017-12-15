@@ -18,7 +18,7 @@ plt.show(img),plt.show()
 
 
 # newmask is the mask image I manually labelled
-newmask = cv2.imread('newmask.png',0)
+newmask = cv2.imread('res/newmask.png',0)
 # whereever it is marked white (sure foreground), change mask=1
 # whereever it is marked black (sure background), change mask=0
 mask[newmask == 0] = 0

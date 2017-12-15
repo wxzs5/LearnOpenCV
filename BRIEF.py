@@ -11,5 +11,5 @@ brief = cv2.xfeatures2d.BriefDescriptorExtractor_create()
 kp = star.detect(img,None)
 # compute the descriptors with BRIEF
 kp, des = brief.compute(img, kp)
-print( brief.descriptorSize() )
-print( des.shape )
+print(brief.descriptorSize())
+print(des.shape)
