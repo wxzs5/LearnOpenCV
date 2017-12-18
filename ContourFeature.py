@@ -57,6 +57,6 @@ cnt1 = contours[0]
 im2,contours,hierarchy = cv2.findContours(thresh2,2,1)
 cnt2 = contours[0]
 ret = cv2.matchShapes(cnt1,cnt2,1,0.0)
-print( ret )
+print(ret)
 
 

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-# img=cv2.imread('messi5.jpg')
+# img=cv2.imread('res/messi5.jpg')
 # res=cv2.pyrDown(img);
 # cv2.imshow('pyradown',res)
 # cv2.imshow('pre',img)
@@ -10,8 +10,8 @@ from matplotlib import pyplot as plt
 # cv2.destroyAllWindows()
 
 #####Image Blending
-A = cv2.imread('apple.jpg')
-B = cv2.imread('orange.jpg')
+A = cv2.imread('res/apple.jpg')
+B = cv2.imread('res/orange.jpg')
 # generate Gaussian pyramid for A
 rows,cols,ch=B.shape
 G = A[0:rows,0:cols,:]

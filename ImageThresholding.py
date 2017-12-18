@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 ######Simple Thresholding
-# img=cv2.imread('gradient.png',0)
+# img=cv2.imread('res/gradient.png',0)
 # ret,thresh1=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 # ret,thresh2=cv2.threshold(img,127,255,cv2.THRESH_BINARY_INV)
 # ret,thresh3=cv2.threshold(img,127,255,cv2.THRESH_TRUNC) 
@@ -21,7 +21,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 #####Adaptive Thresholding
-# img=cv2.imread('sudoku.png',0)
+# img=cv2.imread('res/sudoku.png',0)
 # # img=cv2.medianBlur(img,5)
 
 # ret,th1=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
@@ -39,7 +39,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 #####Otsu's Binarization
-img = cv2.imread('sudoku.png',0)
+img = cv2.imread('res/sudoku.png',0)
 # global thresholding
 ret1,th1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 # Otsu's thresholding
@@ -64,7 +64,7 @@ for i in range(3):
 plt.show()
 
 #####otsu's method in python implemention
-# img = cv2.imread('sudoku.png',0)
+# img = cv2.imread('res/sudoku.png',0)
 # blur = cv2.GaussianBlur(img,(5,5),0)
 # # find normalized_histogram, and its cumulative distribution function
 # hist = cv2.calcHist([blur],[0],None,[256],[0,256])

@@ -3,7 +3,7 @@ from matplotlib import pylab as plt
 import cv2
 
 #####Scaling
-# img= cv2.imread('messi5.jpg')
+# img= cv2.imread('res/messi5.jpg')
 # res= cv2.resize(img,None,fx=0.3,fy=0.3,interpolation=cv2.INTER_CUBIC)
 # # cv2.imwrite('messi5.png',res)
 # cv2.imshow('res',res)
@@ -11,7 +11,7 @@ import cv2
 # cv2.destroyAllWindows()
 
 #####Translation
-# img = cv2.imread('messi5.png',0)
+# img = cv2.imread('res/messi5.png',0)
 # rows,cols = img.shape
 
 # M= np.float32([[1,0,50],[0,1,50]])
@@ -22,7 +22,7 @@ import cv2
 # cv2.destroyAllWindows()
 
 # #####Rotation
-# img=cv2.imread('messi5.png',0)
+# img=cv2.imread('res/messi5.png',0)
 # rows,cols= img.shape
 
 # M= cv2.getRotationMatrix2D((cols/2,rows/2),45,1)
@@ -33,7 +33,7 @@ import cv2
 # cv2.destroyAllWindows()
 
 # #####Affine Transformation
-# img=cv2.imread('messi5.png')
+# img=cv2.imread('res/messi5.png')
 # rows,cols,ch=img.shape
 
 # pts1=np.float32([[50,50],[200,50],[50,200]])
@@ -49,7 +49,7 @@ import cv2
 
 
 #####Perspective Transformation
-img=cv2.imread('messi5.png')
+img=cv2.imread('res/messi5.png')
 rows,cols,ch =img.shape
 
 pts1= np.float32([[56,65],[368,52],[28,387],[389,390]])
