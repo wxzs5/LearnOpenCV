@@ -29,7 +29,8 @@ cv.destroyAllWindows()
 
 #Calibrate camera
 ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
-
+#save matrices
+np.savez('res/calib/B.npz',None,mtx=mtx,dist=dist,rvecs=rvecs,tvecs=tvecs)
 #Undistortion
 img = cv.imread('res/calib/left12.jpg')
 h,  w = img.shape[:2]
