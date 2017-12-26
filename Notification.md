@@ -3,3 +3,5 @@
 ## BUG
 
 * BackgroudSubtraction.py
+* SURF.py
+* 
