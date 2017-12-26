@@ -1,9 +1,19 @@
-import cv2
+import cv2 as cv
 import numpy as np
 
-img = cv2.imread('res/chess.bmp')
-gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-sift = cv2.xfeatures2d.SIFT_create()
-kp = sift.detect(gray,None)
-img=cv2.drawKeypoints(gray,kp,img)
-cv2.imwrite('sift_keypoints.jpg',img)
+
+img = cv.imread('res/home.jpg')
+gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+
+##### First way
+sift = cv.xfeatures2d.SIFT_create()
+kp, des = sift.detectAndCompute(gray,None)
+# ##### Second way
+# sift = cv2.xfeatures2d.SIFT_create()
+# kp = sift.detect(gray,None)
+
+img=cv.drawKeypoints(gray,kp,img)
+
+cv.imshow('sift_keypoints.jpg',img)
+cv.waitKey(0)
+cv.destroyAllWindows()
