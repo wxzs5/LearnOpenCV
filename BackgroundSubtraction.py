@@ -5,7 +5,7 @@ import cv2 as cv
 cap = cv.VideoCapture('res/vtest.avi')  #temporarily,the test video from PETS are not available
 
 # ##### BackgroundSubtractorMOG
-# fgbg = cv.createBackgroundSubtractorMOG()
+# fgbg = cv.bgsegm.createBackgroundSubtractorMOG()  #BUG
 # while(1):
 #     ret, frame = cap.read()
 #     fgmask = fgbg.apply(frame)
@@ -16,7 +16,7 @@ cap = cv.VideoCapture('res/vtest.avi')  #temporarily,the test video from PETS ar
 # cap.release()
 # cv.destroyAllWindows()
 
-# ##### BackgroundSubtractorMOG2
+##### BackgroundSubtractorMOG2
 # fgbg = cv.createBackgroundSubtractorMOG2()
 # while(1):
 #     ret, frame = cap.read()
@@ -29,8 +29,8 @@ cap = cv.VideoCapture('res/vtest.avi')  #temporarily,the test video from PETS ar
 # cv.destroyAllWindows()
 
 ##### BackgroundSubtractorGMG
-kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE,(3,3))
-fgbg = cv.createBackgroundSubtractorGMG()
+kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE,(3,3)) 
+fgbg = cv.bgsegm.createBackgroundSubtractorGMG()          #BUG
 while(1):
     ret, frame = cap.read()
     fgmask = fgbg.apply(frame)
