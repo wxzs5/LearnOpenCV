@@ -2,6 +2,6 @@
 
 ## BUG
 
-* BackgroudSubtraction.py
-* SURF.py
+* BackgroudSubtraction.py(Already fixed to official repository)
+* SURF.py(Already fixed to official repository)
 * 
