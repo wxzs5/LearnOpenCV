@@ -10,4 +10,3 @@ disparity = stereo.compute(imgL,imgR)
 plt.imshow(disparity,'gray')
 plt.show()
 
-#Home work 
