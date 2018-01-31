@@ -42,25 +42,29 @@ from matplotlib import pyplot as plt
 # ret, label,center = cv.kmeans(Z, 2, None, criteria, 10, cv.KMEANS_RANDOM_CENTERS)
 
 # # Now separate the data, note the flatten()
-# A = Z[label.ravel==0]
-# B = Z[label.ravel==1]
+# A = Z[label.ravel()==0]
+# B = Z[label.ravel()==1]
 
 # # Plot data
 # plt.scatter(A[:,0],A[:,1])
-# plt.scatter(B[:,0],B[:,1])
+# plt.scatter(B[:,0],B[:,1], c = 'r')
 # plt.scatter(center[:,0],center[:,1], c = 'y', marker = 's')
 # plt.xlabel('Height'),plt.ylabel('Weight')
 # plt.show()
 
+
 ##### Color quantization
 img = cv.imread('res/home.jpg')
 Z = img.reshape((-1,3))
+
 # convert to np.float32
 Z = np.float32(Z)
+
 # define criteria, number of clusters(K) and apply kmeans()
 criteria = (cv.TERM_CRITERIA_EPS + cv.TERM_CRITERIA_MAX_ITER, 10, 1.0)
 K = 2  #Change to 4,8 to see variation
 ret,label,center=cv.kmeans(Z,K,None,criteria,10,cv.KMEANS_RANDOM_CENTERS)
+
 # Now convert back into uint8, and make original image
 center = np.uint8(center)
 res = center[label.flatten()]
