@@ -2,8 +2,8 @@ import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
 
-img1 = cv.imread('res/left.jpg',0)  #queryimage # left image
-img2 = cv.imread('res/right.jpg',0) #trainimage # right image
+img1 = cv.imread('../../img/left.jpg',0)  #queryimage # left image
+img2 = cv.imread('../../img/right.jpg',0) #trainimage # right image
 sift = cv.xfeatures2d.SIFT_create()
 # find the keypoints and descriptors with SIFT
 kp1, des1 = sift.detectAndCompute(img1,None)

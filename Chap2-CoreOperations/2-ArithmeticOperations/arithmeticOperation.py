@@ -1,7 +1,7 @@
 import numpy as np 
 import cv2
 
-img=cv2.imread('res/lenna.jpg')
+img=cv2.imread('../../img/lenna.jpg')
 img1=img[0:500,0:500]
 img=cv2.imread('opencv-logo.jpg')
 img2=img[0:500,0:500]

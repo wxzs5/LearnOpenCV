@@ -3,7 +3,7 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-img = cv2.imread('res/sudoku.png',0)
+img = cv2.imread('../../img/sudoku.png',0)
 
 # Initiate FAST object with default values
 fast = cv2.FastFeatureDetector_create()

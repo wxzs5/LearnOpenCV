@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # ##### Digits Recognition
-# img = cv.imread('res/digits.png')
+# img = cv.imread('../../img/digits.png')
 # gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 
 # # Split th image to 5000 cells, each 20x20 size
@@ -35,7 +35,7 @@ from matplotlib import pyplot as plt
 
 ##### English Alphabets Recognition
 # Load data
-data = np.loadtxt('res/letter-recognition.data', dtype='float32', delimiter=',',converters={0: lambda ch: ord(ch)-ord('A')})
+data = np.loadtxt('../../img/letter-recognition.data', dtype='float32', delimiter=',',converters={0: lambda ch: ord(ch)-ord('A')})
 
 # Split data to train and test parts
 train, test = np.vsplit(data,2)

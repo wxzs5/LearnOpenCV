@@ -2,7 +2,7 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-img = cv2.imread('res/chess.bmp',0)
+img = cv2.imread('../../img/chess.bmp',0)
 # Initiate FAST detector
 star = cv2.xfeatures2d.StarDetector_create()
 # Initiate BRIEF extractor

@@ -13,7 +13,7 @@ import numpy as np
 from matplotlib import pylab as plt 
 
 BLUE=[255,0,0]
-img1=cv2.imread('res/opencv-logo.jpg')
+img1=cv2.imread('../../img/opencv-logo.jpg')
 
 replicate=cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REPLICATE) 
 reflect=cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REFLECT)

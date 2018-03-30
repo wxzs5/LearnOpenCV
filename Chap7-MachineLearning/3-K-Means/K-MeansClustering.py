@@ -54,7 +54,7 @@ from matplotlib import pyplot as plt
 
 
 ##### Color quantization
-img = cv.imread('res/home.jpg')
+img = cv.imread('../../img/home.jpg')
 Z = img.reshape((-1,3))
 
 # convert to np.float32

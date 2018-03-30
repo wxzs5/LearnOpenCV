@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img1=cv2.imread('res/book1.jpg',0)
-img2=cv2.imread('res/book2.jpg',0)
+img1=cv2.imread('../../img/book1.jpg',0)
+img2=cv2.imread('../../img/book2.jpg',0)
 
 #####Brute-Force Matching with ORB Descriptors
 

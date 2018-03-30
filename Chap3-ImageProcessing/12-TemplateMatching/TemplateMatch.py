@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-img = cv2.imread('res/messi6.jpg',0)
+img = cv2.imread('../../img/messi6.jpg',0)
 img2 = img.copy()
-template = cv2.imread('res/template.jpg',0)
+template = cv2.imread('../../img/template.jpg',0)
 w, h = template.shape[::-1]
 # All the 6 methods for comparison in a list
 methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',

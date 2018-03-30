@@ -1,7 +1,7 @@
 # #####Chessboard Corner Dectection
 # import cv2
 # import numpy as np
-# filename = 'res/chess.bmp'
+# filename = '../../img/chess.bmp'
 # img = cv2.imread(filename)
 # gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 # gray = np.float32(gray)
@@ -20,7 +20,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-filename='res/chess.bmp'
+filename='../../img/chess.bmp'
 img=cv2.imread(filename)
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 

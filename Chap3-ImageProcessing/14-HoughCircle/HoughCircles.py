@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img= cv2.imread('res/opencv_logo.png',0)
+img= cv2.imread('../../img/opencv_logo.png',0)
 img=cv2.medianBlur(img,5)
 cimg=cv2.cvtColor(img,cv2.COLOR_GRAY2BGR)
 

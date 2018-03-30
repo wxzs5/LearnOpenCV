@@ -16,7 +16,7 @@
 #Using video file
 import numpy as np
 import cv2
-cap=cv2.VideoCapture('res/bilibili.flv')
+cap=cv2.VideoCapture('../../img/bilibili.flv')
 while(cap.isOpened()):
     ret,frame=cap.read()
     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)

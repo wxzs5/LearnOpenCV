@@ -2,7 +2,7 @@
 
 import numpy as np
 import cv2 as cv  
-cap = cv.VideoCapture('res/vtest.avi')  #temporarily,the test video from PETS are not available
+cap = cv.VideoCapture('../../img/vtest.avi')  #temporarily,the test video from PETS are not available
 
 # ##### BackgroundSubtractorMOG
 # fgbg = cv.bgsegm.createBackgroundSubtractorMOG()  #BUG

@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # #####Erosion
-# img=cv2.imread('res/j.png',0)
+# img=cv2.imread('../../img/j.png',0)
 # kernel=np.ones((5,5),np.uint8)
 # erosion=cv2.erode(img,kernel,iterations=1)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 # #####Dilation
-# img=cv2.imread('res/j.png',0)
+# img=cv2.imread('../../img/j.png',0)
 # kernel=np.ones((5,5),np.uint8)
 # dilation=cv2.dilate(img,kernel,iterations=1)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -19,7 +19,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 # #####Opening
-# img=cv2.imread('res/jopen.png',0)
+# img=cv2.imread('../../img/jopen.png',0)
 # kernel=np.ones((5,5),np.uint8)
 # opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -27,7 +27,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 # #####Closing
-# img=cv2.imread('res/jclose.png',0)
+# img=cv2.imread('../../img/jclose.png',0)
 # kernel=np.ones((5,5),np.uint8)
 # closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -35,7 +35,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 # #####Morphological Gradient
-# img=cv2.imread('res/j.png',0)
+# img=cv2.imread('../../img/j.png',0)
 # kernel=np.ones((5,5),np.uint8)
 # gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -43,7 +43,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 # #####Top Hat
-# img=cv2.imread('res/j.png',0)
+# img=cv2.imread('../../img/j.png',0)
 # kernel=np.ones((9,9),np.uint8)
 # tophat=cv2.morphologyEx(img,cv2.MORPH_TOPHAT,kernel)
 # plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])
@@ -51,7 +51,7 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 #####Black Hat
-img=cv2.imread('res/j.png',0)
+img=cv2.imread('../../img/j.png',0)
 kernel=np.ones((9,9),np.uint8)
 blackhat=cv2.morphologyEx(img,cv2.MORPH_BLACKHAT,kernel)
 plt.subplot(121),plt.imshow(img),plt.title('source img'),plt.xticks([]),plt.yticks([])

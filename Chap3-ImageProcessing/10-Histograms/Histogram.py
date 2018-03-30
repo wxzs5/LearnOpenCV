@@ -3,7 +3,7 @@
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('res/apple.jpg',0)
+# img=cv2.imread('../../img/apple.jpg',0)
 # plt.hist(img.ravel(),256,[0,256])
 # plt.show()
 
@@ -12,7 +12,7 @@
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('res/apple.jpg')
+# img=cv2.imread('../../img/apple.jpg')
 # color=('b','g','r')
 # for i,col in enumerate(color):
 #     histr=cv2.calcHist([img],[i],None,[256],[0,256])
@@ -25,7 +25,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img=cv2.imread('res/apple.jpg',0)
+img=cv2.imread('../../img/apple.jpg',0)
 #creat a mask
 mask=np.zeros(img.shape[:2],np.uint8)
 mask[20:220,20:220]=255

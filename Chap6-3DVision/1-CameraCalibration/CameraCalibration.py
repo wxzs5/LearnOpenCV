@@ -10,7 +10,7 @@ objp[:,:2] = np.mgrid[0:7,0:6].T.reshape(-1,2)
 # Arrays to store object points and image points from all the images.
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
-images = glob.glob('res/calib/*.jpg')
+images = glob.glob('../../img/calib/*.jpg')
 for fname in images:
     img = cv.imread(fname)
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
@@ -30,9 +30,9 @@ cv.destroyAllWindows()
 #Calibrate camera
 ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 #save matrices
-np.savez('res/calib/B.npz',None,mtx=mtx,dist=dist,rvecs=rvecs,tvecs=tvecs)
+np.savez('../../img/calib/B.npz',None,mtx=mtx,dist=dist,rvecs=rvecs,tvecs=tvecs)
 #Undistortion
-img = cv.imread('res/calib/left12.jpg')
+img = cv.imread('../../img/calib/left12.jpg')
 h,  w = img.shape[:2]
 newcameramtx, roi = cv.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h))
 

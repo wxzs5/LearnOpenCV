@@ -3,7 +3,7 @@
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('res/j.png',0)
+# img=cv2.imread('../../img/j.png',0)
 # ret,thresh=cv2.threshold(img,127,255,0)
 # im2,contours,hierarchy=cv2.findContours(thresh,1,2)
 
@@ -24,7 +24,7 @@
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('res/j.png')
+# img=cv2.imread('../../img/j.png')
 # img_gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 # ret,thresh=cv2.threshold(img_gray,127,255,0)
 # im2,contours,hierarchy=cv2.findContours(thresh,2,1)
@@ -48,8 +48,8 @@
 #####Matching shapes
 import cv2
 import numpy as np
-img1 = cv2.imread('res/j.png',0)
-img2 = cv2.imread('res/jopen.png',0)
+img1 = cv2.imread('../../img/j.png',0)
+img2 = cv2.imread('../../img/jopen.png',0)
 ret, thresh = cv2.threshold(img1, 127, 255,0)
 ret, thresh2 = cv2.threshold(img2, 127, 255,0)
 im2,contours,hierarchy = cv2.findContours(thresh,2,1)

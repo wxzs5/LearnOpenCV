@@ -3,7 +3,7 @@ import cv2 as cv
 import glob
 
 # Load previously saved data
-with np.load('res/calib/B.npz') as X:
+with np.load('../../img/calib/B.npz') as X:
     mtx, dist, _, _ = [X[i] for i in ('mtx','dist','rvecs','tvecs')]
 
 # #####Basic coordinate
@@ -37,7 +37,7 @@ objp = np.zeros((6*7,3), np.float32)
 objp[:,:2] = np.mgrid[0:7,0:6].T.reshape(-1,2)
 
 
-for fname in glob.glob('res/calib/left*.jpg'):
+for fname in glob.glob('../../img/calib/left*.jpg'):
     img = cv.imread(fname)
     gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     ret, corners = cv.findChessboardCorners(gray, (7,6),None)

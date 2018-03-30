@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 #SURF is 3 times faster than SIFT while performance is comparable to SIFT.
 #SURF is good at handling images with blurring and rotation, but not good at handling viewpoint change and illumination change.
 
-img = cv.imread('res/fly.jpg',0)
+img = cv.imread('../../img/fly.jpg',0)
 # Create SURF object. You can specify params here or later.
 # Here I set Hessian Threshold to 400
 surf = cv.xfeatures2d.SURF_create(400)
