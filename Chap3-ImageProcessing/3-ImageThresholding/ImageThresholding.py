@@ -1,14 +1,14 @@
-import cv2
+import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
 ######Simple Thresholding
-# img=cv2.imread('../../img/gradient.png',0)
-# ret,thresh1=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-# ret,thresh2=cv2.threshold(img,127,255,cv2.THRESH_BINARY_INV)
-# ret,thresh3=cv2.threshold(img,127,255,cv2.THRESH_TRUNC) 
-# ret,thresh4=cv2.threshold(img,127,255,cv2.THRESH_TOZERO)
-# ret,thresh5=cv2.threshold(img,127,255,cv2.THRESH_TOZERO_INV)
+# img=cv.imread('../../img/gradient.png',0)
+# ret,thresh1=cv.threshold(img,127,255,cv.THRESH_BINARY)
+# ret,thresh2=cv.threshold(img,127,255,cv.THRESH_BINARY_INV)
+# ret,thresh3=cv.threshold(img,127,255,cv.THRESH_TRUNC) 
+# ret,thresh4=cv.threshold(img,127,255,cv.THRESH_TOZERO)
+# ret,thresh5=cv.threshold(img,127,255,cv.THRESH_TOZERO_INV)
 
 # titles=['Original Image','BINARY','BINARY_INV','TRUNC','TOZERO','TOZERO_INV']
 # images=[img,thresh1,thresh2,thresh3,thresh4,thresh5]
@@ -21,12 +21,12 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 #####Adaptive Thresholding
-# img=cv2.imread('../../img/sudoku.png',0)
-# # img=cv2.medianBlur(img,5)
+# img=cv.imread('../../img/sudoku.png',0)
+# # img=cv.medianBlur(img,5)
 
-# ret,th1=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-# th2=cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,11,2)
-# th3=cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
+# ret,th1=cv.threshold(img,127,255,cv.THRESH_BINARY)
+# th2=cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_MEAN_C,cv.THRESH_BINARY,11,2)
+# th3=cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY,11,2)
 
 # titles=['Origin Image','Global Thresholding(v=127)','Adaptive Mean Thresholding','Adaptive Gaussian Thresholding']
 # images=[img,th1,th2,th3]
@@ -39,14 +39,14 @@ from matplotlib import pyplot as plt
 # plt.show()
 
 #####Otsu's Binarization
-img = cv2.imread('../../img/sudoku.png',0)
+img = cv.imread('../../img/sudoku.png',0)
 # global thresholding
-ret1,th1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+ret1,th1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
 # Otsu's thresholding
-ret2,th2 = cv2.threshold(img,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+ret2,th2 = cv.threshold(img,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
 # Otsu's thresholding after Gaussian filtering
-blur = cv2.GaussianBlur(img,(5,5),0)
-ret3,th3 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+blur = cv.GaussianBlur(img,(5,5),0)
+ret3,th3 = cv.threshold(blur,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
 # plot all the images and their histograms
 images = [img, 0, th1,
           img, 0, th2,
@@ -64,10 +64,10 @@ for i in range(3):
 plt.show()
 
 #####otsu's method in python implemention
-# img = cv2.imread('../../img/sudoku.png',0)
-# blur = cv2.GaussianBlur(img,(5,5),0)
+# img = cv.imread('../../img/sudoku.png',0)
+# blur = cv.GaussianBlur(img,(5,5),0)
 # # find normalized_histogram, and its cumulative distribution function
-# hist = cv2.calcHist([blur],[0],None,[256],[0,256])
+# hist = cv.calcHist([blur],[0],None,[256],[0,256])
 # hist_norm = hist.ravel()/hist.max()
 # Q = hist_norm.cumsum()
 # bins = np.arange(256)
@@ -86,5 +86,5 @@ plt.show()
 #         fn_min = fn
 #         thresh = i
 # # find otsu's threshold value with OpenCV function
-# ret, otsu = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+# ret, otsu = cv.threshold(blur,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
 # print( "{} {}".format(thresh,ret) )

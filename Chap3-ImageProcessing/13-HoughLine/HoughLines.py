@@ -1,11 +1,11 @@
 # #####Hough Line Transform
-# import cv2
+# import cv2 as cv
 # import numpy as np
 
-# img = cv2.imread('../../img/sudoku.png')
-# gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-# edges = cv2.Canny(gray,50,150,apertureSize = 3)
-# lines = cv2.HoughLines(edges,1,np.pi/180,130)
+# img = cv.imread('../../img/sudoku.png')
+# gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+# edges = cv.Canny(gray,50,150,apertureSize = 3)
+# lines = cv.HoughLines(edges,1,np.pi/180,130)
 # for line in lines:
 #     rho,theta = line[0]
 #     a = np.cos(theta)
@@ -16,23 +16,23 @@
 #     y1 = int(y0 + 1000*(a))
 #     x2 = int(x0 - 1000*(-b))
 #     y2 = int(y0 - 1000*(a))
-#     cv2.line(img,(x1,y1),(x2,y2),(0,0,255),2)
+#     cv.line(img,(x1,y1),(x2,y2),(0,0,255),2)
 
-# cv2.imshow('houghlines3',img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+# cv.imshow('houghlines3',img)
+# cv.waitKey(0)
+# cv.destroyAllWindows()
 
 #####Probabilistic Hought Line Transform
-import cv2
+import cv2 as cv
 import numpy as np
-img = cv2.imread('../../img/sudoku.png')
-gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-edges = cv2.Canny(gray,50,150,apertureSize = 3)
-lines = cv2.HoughLinesP(edges,1,np.pi/180,100,minLineLength=100,maxLineGap=10)
+img = cv.imread('../../img/sudoku.png')
+gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+edges = cv.Canny(gray,50,150,apertureSize = 3)
+lines = cv.HoughLinesP(edges,1,np.pi/180,100,minLineLength=100,maxLineGap=10)
 for line in lines:
     x1,y1,x2,y2 = line[0]
-    cv2.line(img,(x1,y1),(x2,y2),(0,255,0),2)
-cv2.imshow('houghlines5',img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    cv.line(img,(x1,y1),(x2,y2),(0,255,0),2)
+cv.imshow('houghlines5',img)
+cv.waitKey(0)
+cv.destroyAllWindows()
 

@@ -1,22 +1,22 @@
 #####OpenCV method
-import cv2
+import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-img=cv2.imread('../../img/home.jpg')
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-hist=cv2.calcHist([hsv],[0,1],None,[180,256],[0,180,0,256])
+img=cv.imread('../../img/home.jpg')
+hsv=cv.cvtColor(img,cv.COLOR_BGR2HSV)
+hist=cv.calcHist([hsv],[0,1],None,[180,256],[0,180,0,256])
 
 plt.imshow(hist,interpolation='nearest')
 plt.show()
 
 # #####2D Histogram in Numpy
-# import cv2
+# import cv2 as cv
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('../../img/home.jpg')
-# hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+# img=cv.imread('../../img/home.jpg')
+# hsv=cv.cvtColor(img,cv.COLOR_BGR2HSV)
 
 # hist,xbins,ybins=np.histogram2d(h.ravel(),s.ravel(),[180,256],[0,180],[0,256])
 # plt.imshow(hist,interpolation = 'nearest')

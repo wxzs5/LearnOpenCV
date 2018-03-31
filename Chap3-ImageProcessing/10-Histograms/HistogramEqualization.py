@@ -1,9 +1,9 @@
 # #####Draw Histogram Graph
-# import cv2
+# import cv2 as cv
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img = cv2.imread('../../img/wiki.jpg',0)
+# img = cv.imread('../../img/wiki.jpg',0)
 # hist,bins= np.histogram(img.flatten(),256,[0,256])
 
 # cdf=hist.cumsum()
@@ -16,28 +16,28 @@
 # plt.show()
 
 # ######Using OpenCV method
-# import cv2
+# import cv2 as cv
 # import numpy as np
 # from matplotlib import pyplot as plt
 
-# img=cv2.imread('../../img/wiki.jpg',0)
-# equ=cv2.equalizeHist(img)
+# img=cv.imread('../../img/wiki.jpg',0)
+# equ=cv.equalizeHist(img)
 # res=np.hstack((img,equ))
-# cv2.imshow('result',res)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+# cv.imshow('result',res)
+# cv.waitKey(0)
+# cv.destroyAllWindows()
 
 #####Adaptive Histogram Equalization(CLAHE)
-import cv2
+import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-img=cv2.imread('../../img/tuska.jpg',0)
+img=cv.imread('../../img/tuska.jpg',0)
 
-clahe=cv2.createCLAHE(clipLimit=2.0,tileGridSize=(8,8))
+clahe=cv.createCLAHE(clipLimit=2.0,tileGridSize=(8,8))
 cl1=clahe.apply(img)
 res=np.hstack((img,cl1))
-cv2.imshow('clahe',res)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv.imshow('clahe',res)
+cv.waitKey(0)
+cv.destroyAllWindows()
 

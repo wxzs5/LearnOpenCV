@@ -9,7 +9,7 @@ gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 sift = cv.xfeatures2d.SIFT_create()
 kp, des = sift.detectAndCompute(gray,None)
 # ##### Second way
-# sift = cv2.xfeatures2d.SIFT_create()
+# sift = cv.xfeatures2d.SIFT_create()
 # kp = sift.detect(gray,None)
 
 img=cv.drawKeypoints(gray,kp,img)
