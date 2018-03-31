@@ -2,13 +2,6 @@ import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
 
-# img=cv.imread('../../img/messi5.jpg')
-# res=cv.pyrDown(img);
-# cv.imshow('pyradown',res)
-# cv.imshow('pre',img)
-# cv.waitKey(0)
-# cv.destroyAllWindows()
-
 #####Image Blending
 A = cv.imread('../../img/apple.jpg')
 B = cv.imread('../../img/orange.jpg')

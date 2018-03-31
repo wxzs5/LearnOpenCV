@@ -6,10 +6,6 @@ img=cv.imread('../../img/coins.jpg')
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 ret,thresh=cv.threshold(gray,0,255,cv.THRESH_BINARY_INV+cv.THRESH_OTSU)
 
-# cv.imshow('result',gray)
-# cv.waitKey(0)
-# cv.destroyAllWindows()
-
 # noise removal
 kernel = np.ones((3,3),np.uint8)
 opening = cv.morphologyEx(thresh,cv.MORPH_OPEN,kernel, iterations = 2)
