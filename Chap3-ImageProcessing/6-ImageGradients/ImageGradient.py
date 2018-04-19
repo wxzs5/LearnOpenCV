@@ -1,24 +1,24 @@
 ########################################################################
 # Sobel
 ########################################################################
-import cv2 as cv
-import numpy as np
-from matplotlib import pyplot as plt
+# import cv2 as cv
+# import numpy as np
+# from matplotlib import pyplot as plt
 
-img = cv.imread('sudoku.png', 0)
-laplacian = cv.Laplacian(img, cv.CV_64F)
-sobelx = cv.Sobel(img, cv.CV_64F, 1, 0, ksize=5)
-sobely = cv.Sobel(img, cv.CV_64F, 0, 1, ksize=5)
+# img = cv.imread('sudoku.png', 0)
+# laplacian = cv.Laplacian(img, cv.CV_64F)
+# sobelx = cv.Sobel(img, cv.CV_64F, 1, 0, ksize=5)
+# sobely = cv.Sobel(img, cv.CV_64F, 0, 1, ksize=5)
 
-plt.subplot(221), plt.imshow(img, cmap='gray'), plt.title(
-    'Original'), plt.xticks([]), plt.yticks([])
-plt.subplot(222), plt.imshow(laplacian, cmap='gray'), plt.title(
-    'Laplician'), plt.xticks([]), plt.yticks([])
-plt.subplot(223), plt.imshow(sobelx, cmap='gray'), plt.title(
-    'Sobelx'), plt.xticks([]), plt.yticks([])
-plt.subplot(224), plt.imshow(sobely, cmap='gray'), plt.title(
-    'Sobely'), plt.xticks([]), plt.yticks([])
-plt.show()
+# plt.subplot(221), plt.imshow(img, cmap='gray'), plt.title(
+#     'Original'), plt.xticks([]), plt.yticks([])
+# plt.subplot(222), plt.imshow(laplacian, cmap='gray'), plt.title(
+#     'Laplician'), plt.xticks([]), plt.yticks([])
+# plt.subplot(223), plt.imshow(sobelx, cmap='gray'), plt.title(
+#     'Sobelx'), plt.xticks([]), plt.yticks([])
+# plt.subplot(224), plt.imshow(sobely, cmap='gray'), plt.title(
+#     'Sobely'), plt.xticks([]), plt.yticks([])
+# plt.show()
 
 ########################################################################
 # Bilateral Satuation
